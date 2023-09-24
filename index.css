@@ -1,4 +1,6 @@
-.headerdiv{
-    text-align: center;
-    align-items: center;
+#map {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
 }

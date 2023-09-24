@@ -1,40 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Behnam's Website</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css" media="all">
+
 </head>
 
 <body>
-    <div class="headerdiv">
-        <h1>Behnam's Website</h1>
-        <p> hello </p>
-        <table border="1" cellpadding="10%">
-            <tr>
-                <th>
-                    first name
-                </th>
-                <th>
-                    last name
-                </th>
-                <th>
-                    grade
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    behnam
-                </td>
-                <td>
-                    mozafari
-                </td>
-                <td>
-                    100%
-                </td>
-            </tr>
-        </table>
-    </div>
+
+    <script type="text/javascript">
+        var spec2 = "homework-week-9/homework-week-9.json";
+        vegaEmbed('#homework', spec2).then(function (result) {
+        }).catch(console.error);
+    </script>
+
 </body>
 
 </html>

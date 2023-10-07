@@ -1,12 +1,4 @@
-Country,TotalCases,"Total
-Deaths","New
-Deaths","Total
-Recovered","Active
-Cases","Serious,
-Critical",TotCases/1Mpop,"Deaths/
-1M pop","Total
-Tests","Tests/
-1M pop",Population,latitude,longitude
+Country,TotalCases,TotalDeaths,NewDeaths,TotalRecovered,ActiveCases,Critical,TotCases/1Mpop,Deaths/1Mpop,TotalTests,Tests/1Mpop,Population,latitude,longitude
 United States of America,98166904,1084282,,94962112,2120510,2970,293206,3239,1118158870,3339729,334805269,37.09024,-95.712891
 India,44587307,528629,,44019095,39583,698,31698,376,894416853,635857,1406631776,20.593684,78.96288
 France,35342950,155078,,34527115,660757,869,538892,2365,271490188,4139547,65584518,46.227638,2.213749

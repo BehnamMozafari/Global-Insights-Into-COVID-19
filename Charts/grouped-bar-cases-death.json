@@ -1,0 +1,220 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing testing rates against death rates.",
+  "data": {
+    "url": "./Covid-Live.csv"
+  },
+  "width": 700,
+  "height": 400,
+  "transform": [
+    {
+      "calculate": "datum['TotCases/1Mpop']",
+      "as": "Total Cases Per Million"
+    },
+    {
+      "calculate": "datum['Deaths/1Mpop']",
+      "as": "Total Deaths Per Million"
+    },
+    {
+      "filter": "datum.Population > Population_Above"
+    },
+    {
+      "filter": "datum['TotCases/1Mpop'] > 0"
+    },
+    {
+      "filter": "datum['Deaths/1Mpop'] > 0"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "Total Deaths Per Million",
+          "type": "quantitative",
+          "title": "Total Deaths Per Million",
+          "axis": {
+            "tickCount": 4
+          },
+          "scale": {
+            "type": "log",
+            "domain": [
+              1,
+              10000
+            ]
+          }
+        },
+        "y": {
+          "field": "Total Cases Per Million",
+          "type": "quantitative",
+          "title": "Total Cases Per Million",
+          "axis": {
+            "tickCount": 5
+          },
+          "scale": {
+            "type": "log",
+            "domain": [
+              10,
+              1000000
+            ]
+          }
+        },
+        "color": {
+          "field": "Country",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Total Cases Per Million",
+            "type": "quantitative"
+          },
+          {
+            "field": "Total Deaths Per Million",
+            "type": "quantitative"
+          }
+        ],
+        "opacity": {
+          "condition": {
+            "test": "test(regexp(search_input,'i'),datum.Country)",
+            "value": 0.8
+          },
+          "value": 0.1
+        },
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              1000000,
+              10000000,
+              50000000,
+              100000000,
+              500000000
+            ],
+            "range": [
+              10,
+              80,
+              180,
+              300,
+              400,
+              600
+            ]
+          },
+          "legend": {
+            "format": ".1s"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "data": {
+        "values": [
+          {
+            "x": 1000,
+            "y": 120,
+            "text": [
+              "Although Australia has relatively high",
+              "cases, it maintains low deaths."
+            ]
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "title": ""
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "title": ""
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "opacity": {
+          "condition": {
+            "test": "Population_Above <= 0"
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "dimgray",
+        "size": 1.5
+      },
+      "data": {
+        "values": [
+          {
+            "x1": 575,
+            "y1": 330000,
+            "x2": 1000,
+            "y2": 150
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative",
+          "title": ""
+        },
+        "y": {
+          "field": "y1",
+          "type": "quantitative",
+          "title": ""
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "opacity": {
+          "condition": {
+            "test": "Population_Above <= 0"
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "search_input",
+      "bind": {
+        "input": "search",
+        "placeholder": "Country",
+        "name": "Search: "
+      },
+      "value": ""
+    },
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    }
+  ]
+}

@@ -155,6 +155,62 @@
     },
     {
       "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {
+          "field": "Total Deaths Per Million",
+          "type": "quantitative",
+          "title": "Total Deaths Per Million",
+          "axis": {
+            "tickCount": 4
+          },
+          "scale": {
+            "type": "log",
+            "domain": [
+              1,
+              10000
+            ]
+          }
+        },
+        "y": {
+          "field": "Total Cases Per Million",
+          "type": "quantitative",
+          "title": "Total Cases Per Million",
+          "axis": {
+            "tickCount": 5
+          },
+          "scale": {
+            "type": "log",
+            "domain": [
+              10,
+              1000000
+            ]
+          }
+        },
+        "text": {
+          "field": "Country",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'China' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
         "type": "rule",
         "color": "dimgray",
         "size": 1.5

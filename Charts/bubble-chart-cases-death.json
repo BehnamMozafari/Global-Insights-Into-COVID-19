@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "Charts/Covid-Live.csv"
-  },
   "width": 850,
   "height": 450,
   "title": "Covid Cases against Deaths per Country (March, 2020)",
+  "data": {
+    "url": "Charts/Covid-Live.csv"
+  },
   "transform": [
     {
       "calculate": "datum['TotCases/1Mpop']",

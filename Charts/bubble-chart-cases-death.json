@@ -1,11 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A scatterplot showing testing rates against death rates.",
+  "description": "A Bubble Chart showing testing rates against death rates.",
   "data": {
     "url": "./Covid-Live.csv"
   },
-  "width": 700,
-  "height": 400,
+  "width": 850,
+  "height": 450,
+  "title": "Covid Cases against Deaths per Country (March, 2020)",
   "transform": [
     {
       "calculate": "datum['TotCases/1Mpop']",

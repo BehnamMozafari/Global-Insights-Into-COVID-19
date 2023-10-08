@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A Bubble Chart showing testing rates against death rates.",
   "data": {
     "url": "Charts/Covid-Live.csv"
   },

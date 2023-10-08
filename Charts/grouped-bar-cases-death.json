@@ -17,12 +17,6 @@
     },
     {
       "filter": "datum.Population > Population_Above"
-    },
-    {
-      "filter": "datum['TotCases/1Mpop'] > 0"
-    },
-    {
-      "filter": "datum['Deaths/1Mpop'] > 0"
     }
   ],
   "layer": [
@@ -64,24 +58,10 @@
           "type": "nominal",
           "legend": null
         },
-        "tooltip": [
-          {
-            "field": "Country",
-            "type": "nominal"
-          },
-          {
-            "field": "Total Cases Per Million",
-            "type": "quantitative"
-          },
-          {
-            "field": "Total Deaths Per Million",
-            "type": "quantitative"
-          }
-        ],
         "opacity": {
           "condition": {
             "test": "test(regexp(search_input,'i'),datum.Country)",
-            "value": 0.8
+            "value": 0.6
           },
           "value": 0.1
         },
@@ -100,16 +80,32 @@
             "range": [
               10,
               80,
-              180,
-              300,
-              400,
-              600
+              200,
+              350,
+              500,
+              800
             ]
           },
           "legend": {
             "format": ".1s"
           }
-        }
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Total Cases Per Million",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Total Deaths Per Million",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
       }
     },
     {
@@ -158,7 +154,8 @@
         "type": "text",
         "align": "right",
         "baseline": "middle",
-        "dx": -12,
+        "dx": -14,
+        
         "fontSize": 11.5,
         "fontStyle": "italic"
       },
@@ -206,7 +203,23 @@
             "value": 1
           },
           "value": 0
-        }
+        },
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Total Cases Per Million",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Total Deaths Per Million",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
       }
     },
     {

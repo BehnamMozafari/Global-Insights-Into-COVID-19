@@ -1,20 +1,30 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url": "Covid-Live-StackedBar.csv"},
-    "transform": [
-        {"filter": "datum['Country'] == 'Thailand' || datum['Country'] == 'Australia' || datum['Country'] == 'Malaysia'"}
-    ],
-    "facet": {"field": "Variable", "type": "nominal", "columns": 2},
-    "spec": {
-        "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
-        "encoding": {
-            "x": {"field": "Country", "type": "ordinal", "axis": {"labelAngle": -45}},
-            "y": {"field": "Value", "type": "quantitative"},
-            "color": {"field": "Country", "type": "nominal"},
-            "tooltip": [
-                {"field": "Country", "type": "ordinal"},
-                {"field": "Value", "type": "quantitative"}
-            ]
+    "width": 600,
+    "height": 450,
+    "title": "Covid Cases against Deaths per Country (March, 2020)",
+    "data": {
+        "url": "./Covid-Live-Long.csv"
+    },
+    "mark": {
+        "type": "boxplot"
+    },
+    "encoding": {
+        "x": {
+            "field": "name",
+            "type": "nominal"
+        },
+        "color": {
+            "field": "name",
+            "type": "nominal",
+            "legend": null
+        },
+        "y": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {
+                "tickCount": 4
+            }
         }
     }
 }

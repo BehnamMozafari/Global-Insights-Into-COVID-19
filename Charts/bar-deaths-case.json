@@ -26,7 +26,7 @@
         {
             "mark": {
                 "type": "bar",
-                "color": "orange"
+                "color": "#da8f2e"
             },
             "encoding": {
                 "x": {

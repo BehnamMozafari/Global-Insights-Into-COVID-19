@@ -1,0 +1,78 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 450,
+    "title": "Deaths per Case by country (March, 2020)",
+    "data": {
+        "url": "Charts/Covid-Live.csv"
+    },
+    "transform": [
+        {
+            "calculate": "datum['Deaths/Case']",
+            "as": "Deaths Per Case"
+        },
+        {
+            "filter": "datum['Country'] == 'France' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'Malaysia'"
+        }
+    ],
+    "encoding": {
+        "y": {
+            "field": "Country",
+            "type": "nominal",
+            "axis": null
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "color": "orange"
+            },
+            "encoding": {
+                "x": {
+                    "aggregate": "sum",
+                    "field": "Deaths Per Case",
+                    "title": "Deaths Per Case"
+                },
+                "tooltip": [
+                    {
+                        "field": "Country",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Deaths Per Case",
+                        "type": "quantitative",
+                        "format": ","
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "x": 5
+            },
+            "encoding": {
+                "text": {
+                    "field": "Country"
+                },
+                "detail": {
+                    "aggregate": "count"
+                },
+                "tooltip": [
+                    {
+                        "field": "Country",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Deaths Per Case",
+                        "type": "quantitative",
+                        "format": ","
+                    }
+                ]
+
+            }
+        }
+    ]
+}

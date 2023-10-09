@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 450,
+    "title": "Covid Cases against Recoveries per Country (March, 2020)",
+    "data": {
+        "url": "Charts/Covid-Live.csv"
+    },
+    "transform": [
+        {
+            "calculate": "datum['TotCases/1Mpop']",
+            "as": "Total Cases Per Million"
+        },
+        {
+            "calculate": "datum['TotRecovered/1Mpop']",
+            "as": "Total Recoveries Per Million"
+        }
+    ],
+    "mark": "circle",
+    "encoding": {
+        "x": {
+            "field": "Total Cases Per Million",
+            "type": "quantitative"
+        },
+        "y": {
+            "field": "Total Recoveries Per Million",
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {
+                "field": "Country",
+                "type": "nominal"
+            },
+            {
+                "field": "Total Cases Per Million",
+                "type": "quantitative",
+                "format": ","
+            },
+            {
+                "field": "Total Recoveries Per Million",
+                "type": "quantitative",
+                "format": ","
+            }
+        ]
+    }
+}

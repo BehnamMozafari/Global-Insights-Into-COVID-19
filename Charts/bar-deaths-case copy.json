@@ -15,13 +15,6 @@
             "filter": "datum['Country'] == 'France' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'Malaysia'"
         }
     ],
-    "encoding": {
-        "y": {
-            "field": "Country",
-            "type": "nominal",
-            "axis": null
-        }
-    },
     "layer": [
         {
             "mark": {
@@ -30,8 +23,15 @@
             },
             "encoding": {
                 "x": {
-                    "aggregate": "sum",
+                    "field": "Country",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0
+                    }
+                },
+                "y": {
                     "field": "Deaths Per Case",
+                    "type": "quantitative",
                     "title": "Deaths Per Case"
                 },
                 "tooltip": [
@@ -45,33 +45,6 @@
                         "format": ","
                     }
                 ]
-            }
-        },
-        {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "x": 5
-            },
-            "encoding": {
-                "text": {
-                    "field": "Country"
-                },
-                "detail": {
-                    "aggregate": "count"
-                },
-                "tooltip": [
-                    {
-                        "field": "Country",
-                        "type": "nominal"
-                    },
-                    {
-                        "field": "Deaths Per Case",
-                        "type": "quantitative",
-                        "format": ","
-                    }
-                ]
-
             }
         }
     ]

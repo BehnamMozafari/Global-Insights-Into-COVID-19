@@ -4,8 +4,37 @@
   "height": 450,
   "title": "World Total Covid Cases Per Million (March, 2020)",
   "projection": {
-    "type": "equalEarth"
+    "type": "equalEarth",
+    "center": {"expr": "center_to"},
+    "scale": {"expr": "zoom_level"}
   },
+  "params": [{
+    "name": "zoom_level",
+    "value": 110,
+    "bind": {
+    "input": "range",
+    "min": 110,
+    "max": 800,
+    "step": 10,
+    "name": "Zoom: "
+    }
+    },
+    {
+    "name": "center_to",
+    "value": [0, 0],
+    "bind": {
+    "input": "select",
+    "options": [
+    [0,0],
+    [133.7751, -25.2744],
+    [101.9758, -4.2105],
+    [15.473, 49.8175],
+    [-3.6044, 12.1549],
+    [-73.8971, 19.895]
+    ],
+    "labels": ["Default", "Australia", "Malaysia", "Europe", "Western Africa", "Caribbean"],
+    "name": "Map Centre: "
+    }}],
   "layer": [
     {
       "data": {

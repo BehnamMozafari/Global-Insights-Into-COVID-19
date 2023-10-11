@@ -25,84 +25,39 @@
 
 <body>
   <div class="page">
-
-    <!-- pure grid group -->
-    <div class="pure-g">
+    <!--Title-->
+    <div class="pure-g" name="title-block">
       <div class="pure-u-1-1">
-        <h1>Covid-19 across the world</h1>
+        <h1>Covid-19 Across The World</h1>
         <p>This visualisation compares covid-19 accross different countries, with a highlight on Australia and Malaysia
         </p>
       </div>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis1" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Vis 1</h2>
-          <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+    <!--Row 1-->
+    <div class="chart-block">
+      <h3>
+        World Total Covid Cases Per Million (March, 2020)
+      </h3>
+      <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis1" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Vis 1</h2>
+            <p>Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+              sapien
+              faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+              sapien
+              faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          </div>
         </div>
       </div>
-
     </div>
-    <!-- end pure grid group -->
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis2" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Vis 2</h2>
-          <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-      </div>
 
-    </div>
-    <!-- end pure grid group -->
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis3" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Vis 3</h2>
-          <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-      </div>
-
-    </div>
-    <!-- end pure grid group -->
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Vis 4</h2>
-          <p>Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-      </div>
-
-    </div>
-    <!-- end pure grid group -->
-
-  </div> <!-- end page -->
-
+  </div>
   <script type="text/javascript">
     var spec1 = "Charts/homework-week-9.json";
     vegaEmbed('#vis1', spec1).then(function (result) { }).catch(console.error);
@@ -113,7 +68,4 @@
     var spec4 = "Charts/bar-deaths-case.json";
     vegaEmbed('#vis4', spec4).then(function (result) { }).catch(console.error);
   </script>
-
 </body>
-
-</html>

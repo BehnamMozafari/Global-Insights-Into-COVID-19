@@ -16,3 +16,8 @@
 body *{
     font-family: 'Open Sans', sans-serif;
 }
+
+#vis1.style {
+    width: 100%;
+    height: 100%;
+}

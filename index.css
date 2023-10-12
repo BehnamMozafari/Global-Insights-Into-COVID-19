@@ -16,3 +16,7 @@
 body *{
     font-family: 'Open Sans', sans-serif;
 }
+
+#title-block {
+    padding: 10px;
+}

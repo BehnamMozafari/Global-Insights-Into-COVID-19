@@ -1,33 +1,56 @@
-.pure-u-2-3 {
-    width: 75%;
-    padding: 10px;
-    background-color: azure;
-}
-
-.pure-u-1-3 {
-    width: 25%;
-    padding: 10px;
-    background-color: azure;
+body * {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .page {
     width: 100%;
-    background-color: lightgrey;
+    background-color: #E9F7E9;  /* Light Green */
     margin: auto;
-	padding: 30px;
-}
-
-body *{
-    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 #title-block {
-    padding: 10px;
-    background-color: azure;
+    padding: 10px 20px;
+    background-color: #B5E7A0;  /* Medium Green */
 }
 
-.pure-g {
+.chart-title {
+    padding: 10px 20px;
+    background-color: #3C763D;  /* Dark Green */
+    color: #FFFFFF;  /* White */
 }
 
 .chart-block {
+    background-color: #E9F7E9;  /* Light Green */
+}
+
+.pure-u-2-3 {
+    width: 75%;
+    float: right;
+}
+
+.pure-u-1-3 {
+    width: 25%;
+    float: left;
+}
+
+.chart-content,
+.description {
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.description {
+    background-color: #B5E7A0;  /* Medium Green */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .chart-title {
+    font-family: 'Montserrat', sans-serif;
 }

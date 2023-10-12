@@ -60,7 +60,7 @@
   </div>
   <script type="text/javascript">
     var spec1 = "Charts/homework-week-9.json";
-    vegaEmbed('#vis1', spec1).then(function (result) { }).catch(console.error);
+    vegaEmbed('#vis1', spec1, { "actions": false }).then(function (result) { }).catch(console.error);
     var spec2 = "Charts/bubble-chart-cases-death.json";
     vegaEmbed('#vis2', spec2).then(function (result) { }).catch(console.error);
     var spec3 = "Charts/Scatter-cases-recovered.json";

@@ -30,9 +30,6 @@ body * {
 
 .pure-u-2-3 {
     width: 75%;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 15px;  /* Added rounded corners */
 }
 
 .pure-u-1-3 {
@@ -44,6 +41,8 @@ body * {
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 15px;  /* Added rounded corners */
+    background-color: #B5E7A0;  /* Medium Green */
+    
 }
 
 .description {

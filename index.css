@@ -1,11 +1,13 @@
 .pure-u-2-3 {
     width: 75%;
     padding: 10px;
+    background-color: azure;
 }
 
 .pure-u-1-3 {
     width: 25%;
     padding: 10px;
+    background-color: azure;
 }
 
 .page {
@@ -21,8 +23,11 @@ body *{
 
 #title-block {
     padding: 10px;
+    background-color: azure;
 }
 
 .pure-g {
-    background-color: azure;
+}
+
+.chart-block {
 }

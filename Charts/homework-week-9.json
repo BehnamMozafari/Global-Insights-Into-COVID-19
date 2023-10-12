@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "World Total Covid Cases Per Million (March, 2020)",
   "width": "container",
+  "height": "container",
+  "background": "#B5E7A0",
   "projection": {
     "type": "equalEarth",
     "center": {"expr": "center_to"},

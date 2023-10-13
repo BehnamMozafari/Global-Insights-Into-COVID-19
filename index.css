@@ -4,7 +4,7 @@ body * {
 
 .page {
     width: 100%;
-    background-color: #E9F7E9;  /* Light Green */
+    background-color: #B5E7A0;  /* medium Green */
     margin: auto;
     padding: 30px;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body * {
 
 #title-block {
     padding: 10px 20px;
-    background-color: #B5E7A0;  /* Medium Green */
+    background-color: #E9F7E9;  /* light Green */
     border-radius: 15px;  /* Added rounded corners */
 }
 
@@ -24,7 +24,7 @@ body * {
 }
 
 .chart-block {
-    background-color: #E9F7E9;  /* Light Green */
+    background-color: #B5E7A0;  /* Light Green */
     border-radius: 15px;  /* Added rounded corners */
 }
 
@@ -45,11 +45,11 @@ body * {
     padding: 10px 20px;
     box-sizing: border-box;
     border-radius: 15px;  /* Added rounded corners */
-    background-color: #B5E7A0;  /* Medium Green */
+    background-color: #E9F7E9;  /* Medium Green */
 }
 
 .description {
-    background-color: #B5E7A0;  /* Medium Green */
+    background-color: #E9F7E9;  /* Medium Green */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@400;700&display=swap');

@@ -2,18 +2,21 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": "container",
-    "title": "Covid Cases against Recoveries per Country (March, 2020)",
+    "title": "Ratio of Cases per Test against Total Tests per million per Country (March, 2020)",
     "data": {
         "url": "Charts/Covid-Live.csv"
     },
     "transform": [
         {
+            "calculate": "datum['Cases/Test']",
+            "as": "Cases per Test"
+        },
+        {
             "calculate": "datum['TotCases/1Mpop']",
             "as": "Total Cases Per Million"
         },
         {
-            "calculate": "datum['TotRecovered/1Mpop']",
-            "as": "Total Recoveries Per Million"
+          "filter": "datum['Cases/Test'] <= 1"
         }
     ],
     "mark": {
@@ -22,11 +25,11 @@
     },
     "encoding": {
         "x": {
-            "field": "Total Cases Per Million",
+            "field": "Cases per Test",
             "type": "quantitative"
         },
         "y": {
-            "field": "Total Recoveries Per Million",
+            "field": "Total Cases Per Million",
             "type": "quantitative"
         },
         "tooltip": [
@@ -40,7 +43,7 @@
                 "format": ","
             },
             {
-                "field": "Total Recoveries Per Million",
+                "field": "Cases per Test",
                 "type": "quantitative",
                 "format": ","
             }

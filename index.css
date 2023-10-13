@@ -3,8 +3,9 @@ body * {
 }
 
 .page {
-    width: 100%;
-    background-color: #B5E7A0;  /* medium Green */
+    width: 1300px;
+    background-color: #B5E7A0;
+    /* medium Green */
     margin: auto;
     padding: 30px;
     box-sizing: border-box;
@@ -12,20 +13,28 @@ body * {
 
 #title-block {
     padding: 10px 20px;
-    background-color: #E9F7E9;  /* light Green */
-    border-radius: 15px;  /* Added rounded corners */
+    background-color: #3C763D;
+    color: #FFFFFF;
+    /* light Green */
+    border-radius: 15px;
+    /* Added rounded corners */
 }
 
 .chart-title {
     padding: 10px 20px;
-    background-color: #3C763D;  /* Dark Green */
-    color: #FFFFFF;  /* White */
-    border-radius: 15px;  /* Added rounded corners */
+    background-color: #3C763D;
+    /* Dark Green */
+    color: #FFFFFF;
+    /* White */
+    border-radius: 15px;
+    /* Added rounded corners */
 }
 
 .chart-block {
-    background-color: #B5E7A0;  /* Light Green */
-    border-radius: 15px;  /* Added rounded corners */
+    background-color: #B5E7A0;
+    /* Light Green */
+    border-radius: 15px;
+    /* Added rounded corners */
 }
 
 .pure-u-2-3 {
@@ -44,12 +53,15 @@ body * {
 .description {
     padding: 10px 20px;
     box-sizing: border-box;
-    border-radius: 15px;  /* Added rounded corners */
-    background-color: #E9F7E9;  /* Medium Green */
+    border-radius: 15px;
+    /* Added rounded corners */
+    background-color: #E9F7E9;
+    /* Medium Green */
 }
 
 .description {
-    background-color: #E9F7E9;  /* Medium Green */
+    background-color: #E9F7E9;
+    /* Medium Green */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@400;700&display=swap');
@@ -58,16 +70,130 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .chart-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.chart-title {
     font-family: 'Montserrat', sans-serif;
 }
 
 .vis-container {
     width: 100%;
-    padding-bottom: 40%;
+    height: 400px;
     position: relative;
 }
 
 h1 {
     font-size: 3em;
+}
+
+.background {
+    background-color: #B5E7A0;
+    /* Medium Green */
+}
+
+#desc-contents-block {
+    padding-top: 20px;
+}
+
+.description-box,
+.contents-box {
+    background-color: #E9F7E9;
+    /* Light Green */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    /* Spacing between the boxes and the next section */
+}
+
+.contents-box h3 {
+    margin-top: 0;
+}
+
+.contents-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contents-box li {
+    margin-bottom: 10px;
+}
+
+.contents-box a {
+    color: #3C763D;
+    /* Dark Green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contents-box a:hover {
+    text-decoration: underline;
+}
+
+.contents-box{
+    margin-left: 20px;
+}
+
+/* ... Previous CSS ... */
+
+.description-box,
+.contents-box {
+    background-color: #E9F7E9;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.overview-box {
+    background-color: #E9F7E9;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.contents-box h3,
+.overview-box h3 {
+    margin-top: 0;
+}
+
+.contents-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default ul margin */
+}
+
+.contents-box li {
+    margin-bottom: 10px;
+}
+
+.contents-box button {
+    background-color: #3C763D; 
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s;
+    width: 100%;  /* Set width relative to the container */
+    text-align: left;  /* Align text to the left */
+    padding-left: 20px;  /* Add some padding to the left of the text */
+}
+
+.contents-box button:hover {
+    background-color: #2C5D2D;
+}
+
+.contents-box{
+    margin-left: 20px;
+}
+
+#covid-img {
+    max-width: 100%;  /* Ensures the image does not overflow its container */
+    max-height: 160px;  /* Limits the height to maintain layout */
+    float: right;  /* Aligns the image to the right within its container */
 }

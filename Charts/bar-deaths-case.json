@@ -3,6 +3,7 @@
     "width": "container",
     "height": "container",
     "title": "Deaths per Case by country (March, 2020)",
+    "background": "#E9F7E9",
     "data": {
         "url": "Charts/Covid-Live.csv"
     },

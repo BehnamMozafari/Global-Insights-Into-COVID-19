@@ -1,0 +1,149 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": "container",
+    "background": "#E9F7E9",
+    "config": {
+        "font": "Cabin",
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        }
+    },
+    "data": {
+        "url": "Charts/Covid-Live-stackedbar.csv"
+    },
+    "transform": [
+        {
+            "window": [
+                {
+                    "op": "sum",
+                    "field": "TotalDeaths",
+                    "as": "TotalDeathsPerRegion"
+                }
+            ],
+            "groupby": [
+                "Region"
+            ]
+        },
+        {
+            "calculate": "datum.Country === 'Other' ? 0 : 1",
+            "as": "SortOrder"
+        }
+    ],
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "cornerRadiusTopRight": 15,
+                "cornerRadiusTopLeft": 15
+            },
+            "encoding": {
+                "x": {
+                    "field": "Region",
+                    "type": "nominal",
+                    "title": "Region",
+                    "sort": {
+                        "field": "TotalDeathsPerRegion",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": 0,
+                        "grid": false
+                    }
+                },
+                "y": {
+                    "field": "TotalDeaths",
+                    "type": "quantitative",
+                    "title": "Total Deaths",
+                    "axis": {
+                        "grid": false
+                    }
+                },
+                "color": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "South Africa",
+                            "Brazil",
+                            "India",
+                            "Indonesia",
+                            "Other",
+                            "Russia",
+                            "Tunisia",
+                            "United Kingdom",
+                            "United States of America"
+                        ],
+                        "range": [
+                            "#FFFF33",
+                            "#377EB8",
+                            "#4DAF4A",
+                            "#FF7F00",
+                            "#666666",
+                            "#984EA3",
+                            "#A65628",
+                            "#F781BF",
+                            "#8DD3C7"
+                        ]
+                    },
+                    "title": "Country"
+                },
+                "order": {
+                    "field": "SortOrder",
+                    "type": "quantitative"
+                },
+                "tooltip": [
+                    {
+                        "field": "Region",
+                        "type": "nominal",
+                        "title": "Region"
+                    },
+                    {
+                        "field": "Country",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "TotalDeaths",
+                        "type": "quantitative",
+                        "title": "Total Deaths"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "size": 13
+            },
+            "encoding": {
+                "x": {
+                    "field": "Region",
+                    "type": "nominal",
+                    "sort": {
+                        "field": "TotalDeathsPerRegion",
+                        "order": "descending"
+                    }
+                },
+                "y": {
+                    "aggregate": "sum",
+                    "field": "TotalDeaths",
+                    "type": "quantitative"
+                },
+                "text": {
+                    "aggregate": "sum",
+                    "field": "TotalDeaths",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "yOffset": {
+                    "value": -6.5
+                }
+            }
+        }
+    ]
+}

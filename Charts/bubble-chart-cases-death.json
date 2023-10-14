@@ -4,6 +4,14 @@
   "height": "container",
   "title": "Covid Cases against Deaths per Country (March, 2020)",
   "background": "#E9F7E9",
+  "config": {
+    "font": "Cabin",
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "data": {
     "url": "Charts/Covid-Live.csv"
   },
@@ -22,7 +30,10 @@
   ],
   "layer": [
     {
-      "mark": "circle",
+      "mark": {
+        "type": "circle",
+        "color": "#4294C7"
+      },
       "encoding": {
         "x": {
           "field": "Total Deaths Per Million",
@@ -151,7 +162,6 @@
         "align": "left",
         "baseline": "middle",
         "dx": 14,
-        
         "fontSize": 11.5,
         "fontStyle": "italic"
       },

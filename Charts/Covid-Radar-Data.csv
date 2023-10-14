@@ -1,0 +1,16 @@
+Country,Variable,Value
+France,Tests/1Mpop,4139547
+Australia,Tests/1Mpop,3024116
+Malaysia,Tests/1Mpop,1947021
+France,Cases/Test,0.130181316
+Australia,Cases/Test,0.129501272
+Malaysia,Cases/Test,0.074900201
+France,TotRecovered/1Mpop,526452.2185
+Australia,TotRecovered/1Mpop,388721.2725
+Malaysia,TotRecovered/1Mpop,143977.5363
+France,Active/1Mpop,10074.89298
+Australia,Active/1Mpop,2330.794614
+Malaysia,Active/1Mpop,758.6855542
+France,Critical/1Mpop,13.25007832
+Australia,Critical/1Mpop,1.879642141
+Malaysia,Critical/1Mpop,1.295919553

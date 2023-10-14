@@ -3,6 +3,10 @@
   "width": "container",
   "height": "container",
   "background": "#E9F7E9",
+  "config": {
+    "font": "Cabin",
+    "style": {"cell": {"stroke": "transparent"}}
+  },
   "projection": {
     "type": "equalEarth",
     "center": {"expr": "center_to"},
@@ -136,6 +140,5 @@
         "stroke": "lightslategrey"
       }
     }
-  ],
-  "config": {}
+  ]
 }

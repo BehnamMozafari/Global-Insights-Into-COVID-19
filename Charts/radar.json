@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "Covid-Radar-Data.csv"
+    },
+    "transform": [
+      {"calculate": "indexof(['Tests/1Mpop', 'Cases/Test', 'TotRecovered/1Mpop', 'Active/1Mpop', 'Critical/1Mpop'], datum.Variable)", "as": "order"},
+      {"calculate": "datum.order / 5 * 2 * PI", "as": "angle"},
+      {"calculate": "sin(datum.angle)", "as": "sin_angle"},
+      {"calculate": "cos(datum.angle)", "as": "cos_angle"}
+    ],
+    "encoding": {
+      "x": {"field": "cos_angle", "type": "quantitative", "axis": null},
+      "y": {"field": "sin_angle", "type": "quantitative", "axis": null}
+    },
+    "layer": [
+      {
+        "mark": {"type": "line", "clip": true, "opacity": 0.7},
+        "encoding": {
+          "detail": {"field": "Country", "type": "nominal"},
+          "color": {"field": "Country", "type": "nominal", "legend": null},
+          "order": {"field": "order", "type": "quantitative"}
+        }
+      },
+      {
+        "mark": {"type": "point", "filled": true},
+        "encoding": {
+          "color": {"field": "Country", "type": "nominal"}
+        }
+      },
+      {
+        "mark": {"type": "text", "angle": 0, "align": "left", "baseline": "middle", "dx": 5},
+        "encoding": {
+          "text": {"field": "Variable", "type": "nominal"}
+        }
+      }
+    ],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  

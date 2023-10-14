@@ -4,9 +4,10 @@
 <head>
   <title>Visualisation 2 Behnam Mozafari</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
 
   <!-- Import pure.css -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
@@ -29,33 +30,34 @@
       <!--Title-->
       <div class="pure-g" id="title-block">
         <div class="pure-u-3-4">
-            <h1>Global Insights into COVID-19</h1>
-            <h3>Exploring COVID-19 Statistics Across the World, Highlighting Australia and Malaysia</h3>
+          <h1>Global Insights into COVID-19</h1>
+          <h3>Exploring COVID-19 Statistics Across the World, Highlighting Australia and Malaysia</h3>
         </div>
         <div class="pure-u-1-4">
-            <img src="coronavirus.png" alt="Covid Particle" id="covid-img">
+          <img src="coronavirus.png" alt="Covid Particle" id="covid-img">
         </div>
-    </div>
+      </div>
       <!--Contents-->
       <div class="pure-g" id="desc-contents-block">
         <div class="pure-u-1-2">
-            <div class="overview-box">
-                <h3>Overview</h3>
-                <p>Your brief description here, ensuring it is succinct and has less than 10 words per line.</p>
-            </div>
+          <div class="overview-box">
+            <h3>Overview</h3>
+            <p>Your brief description here, ensuring it is succinct and has less than 10 words per line.</p>
+          </div>
         </div>
         <div class="pure-u-1-2">
-            <div class="contents-box">
-                <h3>Contents</h3>
-                <ul>
-                  <li><button onclick="window.location.href='#title1'">Visualization 1</button></li>
-                  <li><button onclick="window.location.href='#title2'">Visualization 2</button></li>
-                  <li><button onclick="window.location.href='#title3'">Visualization 3</button></li>
-                  <li><button onclick="window.location.href='#title4'">Visualization 4</button></li>
-                </ul>
-            </div>
+          <div class="contents-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><button onclick="window.location.href='#title1'">Visualization 1</button></li>
+              <li><button onclick="window.location.href='#title2'">Visualization 2</button></li>
+              <li><button onclick="window.location.href='#title3'">Visualization 3</button></li>
+              <li><button onclick="window.location.href='#title4'">Visualization 4</button></li>
+              <li><button onclick="window.location.href='#title5'">Visualization 5</button></li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
       <!--Chart 1-->
       <div class="chart-block">
         <h2 class="chart-title" id="title1">
@@ -81,8 +83,8 @@
       </div>
       <!--Chart 2-->
       <div class="chart-block">
-        <h2 class="chart-title"  id="title2">
-          World Total Covid Cases Per Million (March, 2020)
+        <h2 class="chart-title" id="title2">
+          Covid Cases against Deaths per Country (March, 2020)
         </h2>
         <div class="pure-g">
           <div class="pure-u-1-3">
@@ -148,7 +150,29 @@
           </div>
         </div>
       </div>
-
+      <!--Chart 5-->
+      <div class="chart-block">
+        <h2 class="chart-title" id="title5">
+          World Total Covid Cases Per Million (March, 2020)
+        </h2>
+        <div class="pure-g">
+          <div class="pure-u-1-3">
+            <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in
+              nisl.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in
+              nisl.
+            </div>
+          </div>
+          <div class="pure-u-2-3">
+            <div class="chart-content">
+              <div id="vis5" class="vis-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
@@ -162,5 +186,7 @@
     vegaEmbed('#vis3', spec3, { "actions": false }).then(function (result) { }).catch(console.error);
     var spec4 = "Charts/bar-deaths-case.json";
     vegaEmbed('#vis4', spec4, { "actions": false }).then(function (result) { }).catch(console.error);
+    var spec5 = "Charts/stackedbar-totaldeaths.json";
+    vegaEmbed('#vis5', spec5, { "actions": false }).then(function (result) { }).catch(console.error);
   </script>
 </body>

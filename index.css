@@ -1,6 +1,4 @@
-body * {
-    font-family: 'Open Sans', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 .page {
     width: 1300px;
@@ -64,9 +62,11 @@ body * {
     /* Medium Green */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-body {
+body,
+label,
+canvas,
+.description {
     font-family: 'Cabin', sans-serif;
 }
 
@@ -133,11 +133,9 @@ h1 {
     text-decoration: underline;
 }
 
-.contents-box{
+.contents-box {
     margin-left: 20px;
 }
-
-/* ... Previous CSS ... */
 
 .description-box,
 .contents-box {
@@ -162,7 +160,8 @@ h1 {
 .contents-box ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove default ul margin */
+    margin: 0;
+    /* Remove default ul margin */
 }
 
 .contents-box li {
@@ -170,7 +169,7 @@ h1 {
 }
 
 .contents-box button {
-    background-color: #3C763D; 
+    background-color: #4294C7;
     color: #FFFFFF;
     padding: 10px;
     border: none;
@@ -179,21 +178,59 @@ h1 {
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: background-color 0.3s;
-    width: 100%;  /* Set width relative to the container */
-    text-align: left;  /* Align text to the left */
-    padding-left: 20px;  /* Add some padding to the left of the text */
+    width: 100%;
+    /* Set width relative to the container */
+    text-align: left;
+    /* Align text to the left */
+    padding-left: 20px;
+    /* Add some padding to the left of the text */
 }
 
 .contents-box button:hover {
-    background-color: #2C5D2D;
+    background-color: #367aa4;
 }
 
-.contents-box{
+.contents-box {
     margin-left: 20px;
 }
 
 #covid-img {
-    max-width: 100%;  /* Ensures the image does not overflow its container */
-    max-height: 160px;  /* Limits the height to maintain layout */
-    float: right;  /* Aligns the image to the right within its container */
+    max-width: 100%;
+    /* Ensures the image does not overflow its container */
+    max-height: 160px;
+    /* Limits the height to maintain layout */
+    float: right;
+    /* Aligns the image to the right within its container */
 }
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+/* Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: #3C763D;  /* Dark Green */
+    border-radius: 6px;  /* Make it rounded */
+    margin: 1px;
+}
+
+/* Style the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(42, 80, 53);  /* Slightly darker green on hover */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #B5E7A0;  /* Make it transparent */
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #aad896;  /* Make it transparent */
+}
+
+.vega-tooltip {
+    font-family: 'Cabin', sans-serif !important;
+}
+
+

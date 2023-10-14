@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": "container",
-    "title": "Deaths per Case by country (March, 2020)",
+    "title": "Deaths per Thousand Cases by country (March, 2020)",
     "background": "#E9F7E9",
     "data": {
         "url": "Charts/Covid-Live.csv"
@@ -10,7 +10,7 @@
     "transform": [
         {
             "calculate": "datum['Deaths/Case']",
-            "as": "Deaths Per Case"
+            "as": "Deaths Per Thousand Cases"
         },
         {
             "filter": "datum['Country'] == 'France' || datum['Country'] == 'Australia' || datum['Country'] == 'Italy' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'Malaysia'"
@@ -27,13 +27,16 @@
         {
             "mark": {
                 "type": "bar",
-                "color": "#3C763D"
+                "color": "#4294C7", "cornerRadiusBottomRight": 15, "cornerRadiusTopRight": 15, "cornerRadiusBottomLeft": 15, "cornerRadiusTopLeft": 15
             },
             "encoding": {
                 "x": {
                     "aggregate": "sum",
-                    "field": "Deaths Per Case",
-                    "title": "Deaths Per Case"
+                    "field": "Deaths Per Thousand Cases",
+                    "title": "Deaths Per Thousand Cases",
+                    "axis": {
+                        "grid": false
+                    }
                 },
                 "tooltip": [
                     {
@@ -41,7 +44,7 @@
                         "type": "nominal"
                     },
                     {
-                        "field": "Deaths Per Case",
+                        "field": "Deaths Per Thousand Cases",
                         "type": "quantitative",
                         "format": ","
                     }
@@ -52,7 +55,8 @@
             "mark": {
                 "type": "text",
                 "align": "left",
-                "x": 5
+                "x": 15,
+                "size": 18
             },
             "encoding": {
                 "text": {
@@ -67,13 +71,20 @@
                         "type": "nominal"
                     },
                     {
-                        "field": "Deaths Per Case",
+                        "field": "Deaths Per Thousand Cases",
                         "type": "quantitative",
                         "format": ","
                     }
                 ]
-
             }
         }
-    ]
+    ],
+    "config": {
+        "font": "Cabin",
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        }
+    }
 }

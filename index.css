@@ -169,7 +169,6 @@ h1 {
 }
 
 .contents-box button {
-    background-color: #4294C7;
     color: #FFFFFF;
     padding: 10px;
     border: none;
@@ -186,9 +185,6 @@ h1 {
     /* Add some padding to the left of the text */
 }
 
-.contents-box button:hover {
-    background-color: #367aa4;
-}
 
 .contents-box {
     margin-left: 20px;
@@ -233,4 +229,53 @@ h1 {
     font-family: 'Cabin', sans-serif !important;
 }
 
+.center-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Modify as per your requirement */
+}
 
+#vis6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;  /* Adjust based on your layout */
+}
+
+.section-title {
+    background-color: #4294C7; /* Blue color similar to the buttons */
+    color: #FFFFFF; /* White Text */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px 0; /* Space above and below the title block */
+}
+
+.section-title h2 {
+    font-size: 2em; /* Larger than other titles */
+    margin: 0; /* Remove default margin */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Style for Section Buttons */
+.section-btn {
+    background-color: #4294C7; /* Blue */
+    padding: 15px 25px; /* Larger than viz-btn */
+    font-size: 18px; /* Larger font size */
+}
+
+.section-btn:hover {
+    background-color: #367aa4;
+}
+
+/* Style for Visualization Buttons */
+.viz-btn {
+    background-color: #3C763D; 
+    padding: 10px 20px; /* Smaller than section-btn */
+    font-size: 15px; /* Smaller font size */
+}
+
+.viz-btn:hover {
+    background-color: #336634;
+}

@@ -1,24 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 620,
-    "height": 620,
-    "padding": 90,
+    "width": 600,
+    "height": 600,
+    "padding": 100,
     "autosize": {
         "type": "none",
         "contains": "padding"
     },
-    "background": "#E9F7E9",
-    "config": {
-        "font": "Cabin"
-    },
     "legends": [
         {
             "fill": "color",
-            "labelFont": "Cabin",
-            "titleFont": "Cabin","labelFontSize": 16,
-            "titleFontSize": 18,
             "orient": "right",
-            "offset": -230,
+            "offset": -200,
             "padding": 5,
             "title": "Country",
             "encode": {
@@ -33,7 +26,7 @@
     ],
     "data": [
         {
-            "url": "Charts/Covid-Radar-Data.csv",
+            "url": "./Covid-Radar-Data.csv",
             "name": "data",
             "format": {
                 "type": "csv"
@@ -107,8 +100,8 @@
                 "enter": {
                     "x": {"signal": "1"},
                     "y": {"signal": "1"},
-                    "width": {"value": 200},
-                    "height": {"value": 200}
+                    "width": {"value": 400},
+                    "height": {"value": 400}
                 }
             },
             "from": {
@@ -129,8 +122,7 @@
                             "x": {"signal": "scale('radial', datum.Value) * cos(scale('angular', datum.Variable))"},
                             "y": {"signal": "scale('radial', datum.Value) * sin(scale('angular', datum.Variable))"},
                             "stroke": {"scale": "color", "field": "Country"},
-                            "strokeWidth": {"value": 4},
-                            "strokeOpacity": {"value": 0.6}
+                            "strokeWidth": {"value": 1}
                         }
                     }
                 },
@@ -144,8 +136,8 @@
                             "x": {"signal": "scale('radial', datum.Value) * cos(scale('angular', datum.Variable))"},
                             "y": {"signal": "scale('radial', datum.Value) * sin(scale('angular', datum.Variable))"},
                             "fill": {"scale": "color", "field": "Country"},
-                            "size": {"value": 150},
-                            "strokeWidth": {"value": 3}
+                            "size": {"value": 30},
+                            "strokeWidth": {"value": 1}
                         },
                         "update": {
                             "tooltip": {
@@ -168,7 +160,7 @@
                     "x2": {"signal": "width/2 * cos(scale('angular', datum.Variable))"},
                     "y2": {"signal": "height/2 * sin(scale('angular', datum.Variable))"},
                     "stroke": {"value": "lightgray"},
-                    "strokeWidth": {"value": 2}
+                    "strokeWidth": {"value": 1}
                 }
             }
         },
@@ -192,9 +184,7 @@
                         {"test": "scale('angular', datum.Variable) == 0", "value": "middle"},
                         {"value": "bottom"}
                     ],
-                    "fontWeight": {"value": "bold"},
-                    "font": {"value": "Cabin"},
-                    "fontSize": {"value": 15}
+                    "fontWeight": {"value": "bold"}
                 }
             }
         },
@@ -208,7 +198,7 @@
                     "x": {"field": "x2"},
                     "y": {"field": "y2"},
                     "stroke": {"value": "lightgray"},
-                    "strokeWidth": {"value": 2}
+                    "strokeWidth": {"value": 1}
                 }
             }
         }

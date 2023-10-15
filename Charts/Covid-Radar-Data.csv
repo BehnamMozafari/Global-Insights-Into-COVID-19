@@ -1,16 +1,26 @@
 Country,Variable,Value
-France,Tests/1Mpop,4139547
-Australia,Tests/1Mpop,3024116
-Malaysia,Tests/1Mpop,1947021
-France,Cases/Test,0.130181316
-Australia,Cases/Test,0.129501272
-Malaysia,Cases/Test,0.074900201
-France,TotRecovered/1Mpop,526452.2185
-Australia,TotRecovered/1Mpop,388721.2725
-Malaysia,TotRecovered/1Mpop,143977.5363
-France,Active/1Mpop,10074.89298
-Australia,Active/1Mpop,2330.794614
-Malaysia,Active/1Mpop,758.6855542
-France,Critical/1Mpop,13.25007832
-Australia,Critical/1Mpop,1.879642141
-Malaysia,Critical/1Mpop,1.295919553
+France,Number of Tests,2.067259422
+United Kingdom,Number of Tests,3.811690938
+Italy,Number of Tests,2.043827566
+Australia,Number of Tests,1.509535445
+Malaysia,Number of Tests,0.970979759
+France,Cases Per Test,3.93994219
+United Kingdom,Cases Per Test,4.708165865
+Italy,Cases Per Test,4.402249897
+Australia,Cases Per Test,4.144489698
+Malaysia,Cases Per Test,4.509608124
+France,Recovered Cases,3.845830639
+United Kingdom,Recovered Cases,4.419859544
+Italy,Recovered Cases,3.544098569
+Australia,Recovered Cases,4.629036993
+Malaysia,Recovered Cases,4.364077
+France,Active Cases,2.481392064
+United Kingdom,Active Cases,4.692844093
+Italy,Active Cases,3.024803702
+Australia,Active Cases,4.417328025
+Malaysia,Active Cases,4.810337295
+France,Critical Cases,4.178026112
+United Kingdom,Critical Cases,3.915781469
+Italy,Critical Cases,4.814919825
+Australia,Critical Cases,4.495976037
+Malaysia,Critical Cases,3.932430285

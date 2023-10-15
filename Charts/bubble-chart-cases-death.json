@@ -2,10 +2,17 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": "container",
-  "title": "Covid Cases against Deaths per Country (March, 2020)",
   "background": "#E9F7E9",
   "config": {
     "font": "Cabin",
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 15
+    },
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 15
+    },
     "style": {
       "cell": {
         "stroke": "transparent"
@@ -105,12 +112,12 @@
           {
             "field": "Total Cases Per Million",
             "type": "quantitative",
-            "format": ","
+            "format": ",.0f"
           },
           {
             "field": "Total Deaths Per Million",
             "type": "quantitative",
-            "format": ","
+            "format": ",.0f"
           }
         ]
       }
@@ -119,6 +126,7 @@
       "mark": {
         "type": "text",
         "align": "center",
+        "fontSize": 13,
         "baseline": "middle"
       },
       "data": {
@@ -162,7 +170,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 14,
-        "fontSize": 11.5,
+        "fontSize": 13,
         "fontStyle": "italic"
       },
       "encoding": {
@@ -218,12 +226,12 @@
           {
             "field": "Total Cases Per Million",
             "type": "quantitative",
-            "format": ","
+            "format": ",.0f"
           },
           {
             "field": "Total Deaths Per Million",
             "type": "quantitative",
-            "format": ","
+            "format": ",.0f"
           }
         ]
       }

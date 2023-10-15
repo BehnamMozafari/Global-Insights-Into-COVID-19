@@ -149,9 +149,10 @@
                         },
                         "update": {
                             "tooltip": {
-                                "signal": "{'Country': datum.Country, 'Measure': datum.Variable, 'Rating': datum.Value}"
+                                "signal": "{'Country': datum.Country, 'Measure': datum.Variable, 'Rating': format(datum.Value, ',.2f')}"
                             }
                         }
+                        
                     }
                 }
             ]

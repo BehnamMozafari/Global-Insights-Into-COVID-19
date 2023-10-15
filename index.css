@@ -319,3 +319,13 @@ h1 {
 .viz-btn:hover {
     background-color: #336634;
 }
+
+label {
+    font-size: 15px;
+    /* Adjust as per your requirement */
+}
+
+input[type=range] {
+    margin-top: 15px;
+    /* Optional: to give some space between the label and slider */
+}

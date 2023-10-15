@@ -5,40 +5,83 @@
   "background": "#E9F7E9",
   "config": {
     "font": "Cabin",
-    "style": {"cell": {"stroke": "transparent"}}
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
   },
   "projection": {
     "type": "equalEarth",
-    "center": {"expr": "center_to"},
-    "scale": {"expr": "zoom_level"}
-  },
-  "params": [{
-    "name": "zoom_level",
-    "value": 130,
-    "bind": {
-    "input": "range",
-    "min": 100,
-    "max": 800,
-    "step": 10,
-    "name": "Zoom: "
+    "center": {
+      "expr": "center_to"
+    },
+    "scale": {
+      "expr": "zoom_level"
     }
+  },
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 130,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 800,
+        "step": 10,
+        "name": "Zoom: "
+      }
     },
     {
-    "name": "center_to",
-    "value": [0, 0],
-    "bind": {
-    "input": "select",
-    "options": [
-    [0,0],
-    [133.7751, -25.2744],
-    [101.9758, -4.2105],
-    [15.473, 49.8175],
-    [-3.6044, 12.1549],
-    [-73.8971, 19.895]
-    ],
-    "labels": ["Default", "Australia", "Malaysia", "Europe", "Western Africa", "Caribbean"],
-    "name": "Map Centre: "
-    }}],
+      "name": "center_to",
+      "value": [
+        0,
+        0
+      ],
+      "bind": {
+        "input": "select",
+        "options": [
+          [
+            0,
+            0
+          ],
+          [
+            133.7751,
+            -25.2744
+          ],
+          [
+            101.9758,
+            -4.2105
+          ],
+          [
+            15.473,
+            49.8175
+          ],
+          [
+            -3.6044,
+            12.1549
+          ],
+          [
+            -73.8971,
+            19.895
+          ]
+        ],
+        "labels": [
+          "Default",
+          "Australia",
+          "Malaysia",
+          "Europe",
+          "Western Africa",
+          "Caribbean"
+        ],
+        "name": "Map Centre: "
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -53,7 +96,7 @@
         "fill": "#a2bed4"
       }
     },
-       {
+    {
       "data": {
         "url": "Charts/ne_110m.json",
         "format": {
@@ -121,7 +164,8 @@
           {
             "field": "TotCases/1Mpop",
             "type": "quantitative",
-            "title": "Total Cases Per Million"
+            "title": "Total Cases Per Million",
+            "format": ",.0f"
           }
         ]
       }

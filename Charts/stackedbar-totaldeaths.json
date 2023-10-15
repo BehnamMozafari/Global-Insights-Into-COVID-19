@@ -5,6 +5,14 @@
     "background": "#E9F7E9",
     "config": {
         "font": "Cabin",
+        "legend": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
+        "axis": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
         "style": {
             "cell": {
                 "stroke": "transparent"
@@ -104,7 +112,8 @@
                     {
                         "field": "TotalDeaths",
                         "type": "quantitative",
-                        "title": "Total Deaths"
+                        "title": "Total Deaths",
+                        "format": ",.0f"
                     }
                 ]
             }

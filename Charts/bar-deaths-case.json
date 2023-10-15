@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": "container",
-    "title": "Deaths per Thousand Cases by country (March, 2020)",
     "background": "#E9F7E9",
     "data": {
         "url": "Charts/Covid-Live.csv"
@@ -31,7 +30,11 @@
         {
             "mark": {
                 "type": "bar",
-                "color": "#4294C7", "cornerRadiusBottomRight": 15, "cornerRadiusTopRight": 15, "cornerRadiusBottomLeft": 15, "cornerRadiusTopLeft": 15
+                "color": "#4294C7",
+                "cornerRadiusBottomRight": 15,
+                "cornerRadiusTopRight": 15,
+                "cornerRadiusBottomLeft": 15,
+                "cornerRadiusTopLeft": 15
             },
             "encoding": {
                 "x": {
@@ -50,7 +53,7 @@
                     {
                         "field": "Deaths Per Thousand Cases",
                         "type": "quantitative",
-                        "format": ","
+                        "format": ",.2f"
                     }
                 ]
             }
@@ -77,7 +80,7 @@
                     {
                         "field": "Deaths Per Thousand Cases",
                         "type": "quantitative",
-                        "format": ","
+                        "format": ",.2f"
                     }
                 ]
             }
@@ -85,6 +88,14 @@
     ],
     "config": {
         "font": "Cabin",
+        "legend": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
+        "axis": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
         "style": {
             "cell": {
                 "stroke": "transparent"

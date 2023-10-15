@@ -2,8 +2,23 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": "container",
-    "title": "Ratio of Cases per Test against Total Tests per million per Country (March, 2020)",
     "background": "#E9F7E9",
+    "config": {
+        "font": "Cabin",
+        "legend": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
+        "axis": {
+            "labelFontSize": 13,
+            "titleFontSize": 15
+        },
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        }
+    },
     "data": {
         "url": "Charts/Covid-Live.csv"
     },
@@ -17,7 +32,7 @@
             "as": "Total Cases Per Million"
         },
         {
-          "filter": "datum['Cases/Test'] <= 1"
+            "filter": "datum['Cases/Test'] <= 1"
         }
     ],
     "mark": {
@@ -41,12 +56,12 @@
             {
                 "field": "Total Cases Per Million",
                 "type": "quantitative",
-                "format": ","
+                "format": ",.0f"
             },
             {
                 "field": "Cases per Test",
                 "type": "quantitative",
-                "format": ","
+                "format": ",.2f"
             }
         ]
     }

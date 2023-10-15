@@ -20,7 +20,11 @@
         "y": {
             "field": "Country",
             "type": "nominal",
-            "axis": null
+            "axis": null,
+            "sort": {
+                "field": "Deaths Per Thousand Cases",
+                "order": "ascending"
+            }
         }
     },
     "layer": [

@@ -69,23 +69,19 @@
                             "South Africa",
                             "Brazil",
                             "India",
-                            "Indonesia",
                             "Other",
                             "Russia",
-                            "Tunisia",
                             "United Kingdom",
                             "United States of America"
                         ],
                         "range": [
                             "#FFFF33",
-                            "#377EB8",
-                            "#4DAF4A",
+                            "#8DD3C7",
                             "#FF7F00",
-                            "#666666",
+                            "#4294C7",
                             "#984EA3",
-                            "#A65628",
                             "#F781BF",
-                            "#8DD3C7"
+                            "#A65628"
                         ]
                     },
                     "title": "Country"

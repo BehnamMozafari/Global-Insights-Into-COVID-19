@@ -1,13 +1,11 @@
-Country,TotalDeaths,Region
-Russia,387163,Europe
-United Kingdom,189919,Europe
-Other,1342787,Europe
-India,528629,Asia
-Indonesia,158093,Asia
-Other,792800,Asia
-United States of America,1084282,Americas
-Brazil,686027,Americas
-Other,1097958,Americas
-South Africa,102185,Africa
-Tunisia,29249,Africa
-Other,124697,Africa
+Country,TotalDeaths,Region,,,,
+Russia,387163,Europe,,,,
+United Kingdom,189919,Europe,,,,
+Other,1342787,Europe,,,,
+India,528629,Asia,,,,
+Other,950893,Asia,,,,
+United States of America,1084282,Americas,,,,
+Brazil,686027,Americas,,,,
+Other,1097958,Americas,,,,
+South Africa,102185,Africa,,,,
+Other,153946,Africa,,,,s

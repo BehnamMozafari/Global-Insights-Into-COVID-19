@@ -38,8 +38,7 @@
   "layer": [
     {
       "mark": {
-        "type": "circle",
-        "color": "#4294C7"
+        "type": "circle"
       },
       "encoding": {
         "x": {
@@ -72,6 +71,17 @@
             ]
           }
         },
+        "color": {
+          "field": "Region",
+          "type": "nominal",
+          "legend": {
+            "title": "Region"
+          },
+          "scale": {
+            "domain": ["Americas", "Asia", "Europe", "Africa", "Oceania"],
+            "range": ["#E69F00", "#56B4E9", "#009E73", "#525252", "#CC79A7"]
+          }
+        },        
         "opacity": {
           "condition": {
             "test": "test(regexp(search_input,'i'),datum.Country)",
@@ -126,7 +136,7 @@
       "mark": {
         "type": "text",
         "align": "center",
-        "fontSize": 13,
+        "fontSize": 11,
         "baseline": "middle"
       },
       "data": {
@@ -268,6 +278,89 @@
         },
         "y2": {
           "field": "y2"
+        },
+        "opacity": {
+          "condition": {
+            "test": "Population_Above <= 0"
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "dimgray",
+        "size": 1.5
+      },
+      "data": {
+        "values": [
+          {
+            "x1": 1096,
+            "y1": 140000,
+            "x2": 3000,
+            "y2": 3600
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative",
+          "title": ""
+        },
+        "y": {
+          "field": "y1",
+          "type": "quantitative",
+          "title": ""
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "opacity": {
+          "condition": {
+            "test": "Population_Above <= 0"
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 11,
+        "baseline": "middle"
+      },
+      "data": {
+        "values": [
+          {
+            "x": 3000,
+            "y": 3000,
+            "text": [
+              "Malaysia has lower cases, but more",
+              "relative deaths than Australia."
+            ]
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "title": ""
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "title": ""
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
         },
         "opacity": {
           "condition": {

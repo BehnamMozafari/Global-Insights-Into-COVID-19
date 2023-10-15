@@ -118,8 +118,15 @@ h1 {
     /* Spacing between the boxes and the next section */
 }
 
+footer {
+    background-color: #B5E7A0;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
 .contents-box h3 {
     margin-top: 0;
+    
 }
 
 .contents-box ul {

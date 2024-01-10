@@ -1,7 +1,5 @@
 # Visualisation Dashboard For Global Insights Into COVID-19
 
-## Description
-
 This visualisation explores COVID-19 statistics across the world, highlighting both Australia and Malaysia.
 
 ## Instructions to view visualisation
